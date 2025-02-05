@@ -1,6 +1,7 @@
 # Certificate Generator
 
-This script generates certificates using a template and student data from an Excel file. It then converts the generated certificates into PDFs.
+This script streamlines certificate generation by using a Word template (`.docx`) and student data from an Excel file (`.xlsx`). It automatically fills in the required details, creates personalized certificates in `.docx` format, and then converts them into `.pdf` for easy distribution. Designed for efficiency, this tool simplifies bulk certificate processing while ensuring accuracy.
+
 
 ## Requirements
 - Python 3.x
