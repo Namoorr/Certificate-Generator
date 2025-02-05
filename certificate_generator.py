@@ -14,7 +14,10 @@ except Exception as e:
 
 def generate_certificate(student_data):
     try:
+        # load certificate template
         tpl = DocxTemplate("certificate_template.docx")
+        
+        # Prepare the context dictionary with placeholders and values
         context = {
             "Name": student_data['Name'],
             "Enrollment": student_data['Enrollment'],
@@ -23,6 +26,8 @@ def generate_certificate(student_data):
             "Date_from": student_data['Date_from']
         }
         output_docx_filename = f"{student_data['Batch']}-{student_data['sr']}.docx"
+        
+        #  Fill the template with student data
         tpl.render(context)
         tpl.save(output_docx_filename)
         convert_to_pdf(output_docx_filename)
